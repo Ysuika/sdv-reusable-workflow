@@ -13,3 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo ${{ inputs.swc-name }}
+      - id: foo
+        uses: Ysuika/sdv-composite-action@main
+        with:
+          repository_url: 'https://github.com/Ysuika/test-scenario.git'
+          branch_name: 'main'
