@@ -11,8 +11,5 @@ jobs:
   experiment:
     runs-on: windows-latest
     steps:
-      - uses: actions/labeler@v4
-        with:
-          swc-name: ${{ inputs.swc-name }}
-      - run: echo ${{ env.swc-name }}
       - uses: actions/checkout@v4
+      - run: echo ${{ inputs.swc-name }}
