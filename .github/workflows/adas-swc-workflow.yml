@@ -1,0 +1,19 @@
+name: adas-swc-workflow
+
+on:
+  workflow_call:
+    inputs:
+      swc-name:
+        required: true
+        type: string
+
+jobs:
+  experiment:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/labeler@v4
+        with:
+          swc-name: ${{ inputs.swc-name }}
+      - run: echo ${{ swc-name }}
+      - uses: actions/checkout@v4
+      - run: echo ${{ swc-name }}
